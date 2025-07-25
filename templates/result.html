@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz Sonucu - Python Pro Quiz{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body text-center p-5">
+                <div class="mb-4">
+                    {% if percentage >= 80 %}
+                        <h1 class="text-success">🎉 Tebrikler!</h1>
+                        <p class="lead text-success">Mükemmel bir performans sergiledинiz!</p>
+                    {% elif percentage >= 60 %}
+                        <h1 class="text-primary">👏 İyi İş!</h1>
+                        <p class="lead text-primary">Başarılı bir sonuç aldınız!</p>
+                    {% elif percentage >= 40 %}
+                        <h1 class="text-warning">📚 Daha İyi Olabilir</h1>
+                        <p class="lead text-warning">Biraz daha çalışma gerekiyor!</p>
+                    {% else %}
+                        <h1 class="text-danger">💪 Tekrar Deneyin</h1>
+                        <p class="lead text-danger">Daha fazla pratik yapmalısınız!</p>
+                    {% endif %}
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h3 class="text-primary">{{ score }}/{{ total }}</h3>
+                                <small class="text-muted">Son Skorunuz</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h3 class="text-success">{{ user_high }}/{{ total }}</h3>
+                                <small class="text-muted">En Yüksek Skorunuz</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h3 class="text-info">%{{ percentage }}</h3>
+                                <small class="text-muted">Başarı Oranı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress mb-4">
+                    <div class="progress-bar 
+                        {% if percentage >= 80 %}bg-success
+                        {% elif percentage >= 60 %}bg-primary
+                        {% elif percentage >= 40 %}bg-warning
+                        {% else %}bg-danger{% endif %}" 
+                         role="progressbar" style="width: ( percentage )"> 
+                         
+                        %{{ percentage }}
+                    </div>
+                </div>
+
+                <div class="alert alert-info mb-4">
+                    <h5>📊 Detaylı Sonuç:</h5>
+                    <p class="mb-1"><strong>Doğru Cevaplar:</strong> {{ score }} adet</p>
+                    <p class="mb-1"><strong>Yanlış Cevaplar:</strong> {{ total - score }} adet</p>
+                    <p class="mb-0"><strong>Toplam Soru:</strong> {{ total }} adet</p>
+                </div>
+
+                {% if score == user_high %}
+                <div class="alert alert-success">
+                    🏆 <strong>Yeni Rekor!</strong> Bu sizin en yüksek skorunuz!
+                </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-md-6 mb-2">
+                        <a href="{{ url_for('restart') }}" class="btn btn-primary btn-lg w-100">
+                            🔄 Tekrar Dene
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg w-100">
+                            🏠 Ana Sayfa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h6 class="text-muted">Öğrenme Kaynakları:</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small class="text-muted">
+                                • Discord.py Documentation<br>
+                                • Flask Official Guide<br>
+                                • TensorFlow Tutorials
+                            </small>
+                        </div>
+                        <div class="col-md-6">
+                            <small class="text-muted">
+                                • OpenCV Tutorials<br>
+                                • NLTK Documentation<br>
+                                • BeautifulSoup Guide
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

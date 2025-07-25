@@ -1,0 +1,380 @@
+/* Custom CSS for Python Pro Quiz */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Statistics */
+.stats-header {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-header small {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stats-header strong {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(45deg, #667eea, #764ba2) !important;
+    border-radius: 20px 20px 0 0 !important;
+    color: white !important;
+    padding: 20px;
+    border: none;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 35px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: white;
+}
+
+/* Form Elements */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Question Card Styles */
+.question-card {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.question-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Option Button Styles */
+.option-btn {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+    background: white;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-btn:hover {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border-color: transparent;
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.option-btn:active {
+    transform: translateX(5px) scale(0.98);
+}
+
+.option-btn strong {
+    margin-right: 10px;
+    display: inline-block;
+    width: 25px;
+}
+
+/* Progress Bar */
+.progress {
+    height: 12px;
+    border-radius: 10px;
+    background: rgba(233, 236, 239, 0.3);
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 0.6s ease;
+    background: linear-gradient(45deg, #28a745, #20c997);
+}
+
+/* Alert Styles */
+.alert {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.alert-info {
+    background: linear-gradient(45deg, rgba(23, 162, 184, 0.1), rgba(102, 126, 234, 0.1));
+    border-left: 4px solid #17a2b8;
+}
+
+.alert-success {
+    background: linear-gradient(45deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.1));
+    border-left: 4px solid #28a745;
+}
+
+/* Badge Styles */
+.badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Result Cards */
+.result-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+}
+
+.result-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-card small {
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+    backdrop-filter: blur(10px);
+}
+
+footer h5 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 20px;
+    }
+    
+    .option-btn {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .stats-header {
+        text-align: center;
+    }
+    
+    .stats-header .col-md-6 {
+        margin-bottom: 10px;
+    }
+    
+    .result-card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .option-btn:hover {
+        transform: none;
+    }
+    
+    .question-card:hover {
+        transform: none;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}

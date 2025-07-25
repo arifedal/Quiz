@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Python Pro Quiz - Ana Sayfa{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body text-center p-5">
+                <h1 class="card-title mb-4" style="color: #667eea; font-weight: bold;">
+                    🐍 Python Pro Seviyesi Quiz
+                </h1>
+                <p class="card-text lead mb-4">
+                    Python'ın farklı alanlarındaki bilginizi test edin!
+                </p>
+                
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h5 class="text-muted mb-3">Quiz Konuları:</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-start">
+                                    <li class="mb-2">🤖 Discord.py ile Sohbet Botu</li>
+                                    <li class="mb-2">🌐 Flask ile Web Geliştirme</li>
+                                    <li class="mb-2">🧠 Yapay Zeka Geliştirme</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-start">
+                                    <li class="mb-2">👁️ Computer Vision</li>
+                                    <li class="mb-2">💬 Natural Language Processing</li>
+                                    <li class="mb-2">📚 Python Kütüphaneleri</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>📝 Quiz Bilgileri:</strong><br>
+                    • Toplam 7 soru<br>
+                    • Her soru için 4 seçenek<br>
+                    • Quiz'i istediğiniz kadar tekrarlayabilirsiniz<br>
+                    • En yüksek skorunuz kaydedilir
+                </div>
+
+                <form method="POST" action="{{ url_for('start_quiz') }}">
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" 
+                               name="username" placeholder="Adınızı girin..." 
+                               required style="border-radius: 25px; text-align: center;">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        🚀 Quiz'i Başlat
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
