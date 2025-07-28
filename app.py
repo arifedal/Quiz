@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key-here-change-this-in-production'
+app.config['SECRET_KEY'] = 'your-secret-key'
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'quiz.db')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quiz.db'
